@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of Santiago is to contribute to psychological impacts on travelers by examining the feelings of stress by users of active and motorized modes of transportation.Furthermore, it also investigates the importance that travelers attach to their feelings of stress.
+The goal of Santiago is to contribute to psychological impacts on travelers by examining the feelings of stress by users of active and motorized modes of transportation.Furthermore, it also investigates the importance that travelers attach to their feelings of stress. More words.
 
 ## Installation
 

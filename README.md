@@ -6,7 +6,11 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of Santiago is to …
+The goal of Santiago is to contribute to psychological impacts on
+travelers by examining the feelings of stress by users of active and
+motorized modes of transportation.Furthermore, it also investigates the
+importance that travelers attach to their feelings of stress. More
+words.
 
 ## Installation
 
@@ -17,11 +21,11 @@ You can install the development version of Santiago from
 # install.packages("devtools")
 devtools::install_github("NiloofarNL/Santiago")
 #> Downloading GitHub repo NiloofarNL/Santiago@HEAD
-#>          checking for file 'C:\Users\bahman.notebook\AppData\Local\Temp\RtmpGgjPmK\remotes26b02e005471\NiloofarNL-Santiago-74c9bd6/DESCRIPTION' ...  v  checking for file 'C:\Users\bahman.notebook\AppData\Local\Temp\RtmpGgjPmK\remotes26b02e005471\NiloofarNL-Santiago-74c9bd6/DESCRIPTION' (506ms)
+#>          checking for file 'C:\Users\bahman.notebook\AppData\Local\Temp\RtmpkJWDW6\remotes3c9c67f4d5e\NiloofarNL-Santiago-39fe745/DESCRIPTION' ...  v  checking for file 'C:\Users\bahman.notebook\AppData\Local\Temp\RtmpkJWDW6\remotes3c9c67f4d5e\NiloofarNL-Santiago-39fe745/DESCRIPTION' (564ms)
 #>       -  preparing 'Santiago':
 #>    checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   v  checking DESCRIPTION meta-information
 #>       -  checking for LF line-endings in source and make files and shell scripts
-#>   -  checking for empty or unneeded directories
+#>       -  checking for empty or unneeded directories
 #>       -  building 'Santiago_0.0.0.9000.tar.gz'
 #>      
 #> 
