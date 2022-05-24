@@ -4,7 +4,7 @@
 \name{Santiago-package}
 \alias{Santiago}
 \alias{Santiago-package}
-\title{Santiago: A package based on a paper-based survey conducted face-to-face in Santiago in 2016.}
+\title{Santiago: A package based on a paper-based survey conducted face-to-face in Santiago in 2016}
 \description{
 A dataset containing information about socio-demographics, health-related, perceptions and travel behaviour, travel choices and planning, social interaction factors, built environment of users of active and motorized modes of transportation.
 

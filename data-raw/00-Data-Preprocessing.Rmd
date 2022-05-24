@@ -1,0 +1,48 @@
+---
+title: "00-Data-Preprocessing"
+output: html_notebook
+---
+
+In this notebook we read and preprocess the raw data.
+
+Read packages used:
+```{r}
+library(readxl)
+library(dplyr)
+```
+
+Read source file:
+```{r}
+
+Santiago2016 <- read_excel("Santiago2016.xlsx")
+```
+
+Rename:
+```{r}
+Santiago2016 <- Santiago2016 %>%
+  rename(ID = NUMERO)
+```
+
+Split table:
+```{r}
+Santiago2016_r0 <- Santiago2016 %>%
+  dplyr::select(ID, ORIGIN, starts_with("r0"))
+```
+
+```{r}
+Santiago2016_allelse <- Santiago2016 %>%
+  dplyr::select(-starts_with("r0"))
+```
+
+Save  to `data` folder:
+```{r}
+usethis::use_data(Santiago2016, 
+                  overwrite = TRUE)
+
+usethis::use_data(Santiago2016_r0, 
+                  overwrite = TRUE)
+
+usethis::use_data(Santiago2016_allelse, 
+                  overwrite = TRUE)
+```
+

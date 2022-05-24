@@ -1,5 +1,5 @@
 Package: Santiago
-Title: A package based on a paper-based survey conducted face-to-face in Santiago in 2016.
+Title: A package based on a paper-based survey conducted face-to-face in Santiago in 2016
 Version: 0.0.0.9000
 Authors@R: 
     person("Niloofar", "Nalaee", , "nalaeen@mcmaster.ca", role = c("aut", "cre"),
@@ -16,19 +16,6 @@ Depends:
     R (>= 2.10)
 LazyData: true
 Suggests: 
-    dplyr,
-    fitdistrplus,
-    ggplot2,
-    ggspatial,
-    kableExtra,
     knitr,
-    magrittr,
-    MASS,
-    patchwork,
-    rlang,
-    rmarkdown,
-    sf,
-    scales,
-    shadowtext,
-    tmap
+    magrittr
 VignetteBuilder: knitr
