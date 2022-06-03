@@ -16,7 +16,7 @@ NULL
 #' @references \url{https://github.com/NiloofarNL/Santiago}
 NULL
 
-#' Santiago2016.
+#' SantiagoSurvey.
 #'
 #' A dataset containing information about socio-demographics, health-related, perceptions and travel behaviour, travel choices and planning, social interaction factors, built environment of users of active and motorized modes of transportation.
 #' @format A data frame with 451 rows and 130 variables:
@@ -158,14 +158,14 @@ NULL
 #' @docType data
 #' @keywords datasets
 #' @name Santiago2016
-#' @usage data(Santiago2016)
+#' @usage data(SantiagoSurvey)
 #' @source A face to face survey considering pre-census 2012
 #' @examples
-#'  data(Santiago2016)
+#'  data(SantiagoSurvey)
 #'  GDPPC <- Santiago2016$GDPPC
-"Santiago2016"
+"SantiagoSurvey"
 
-#' Santiago2016_r0.
+#' SantiagoSurvey_r0.
 #'
 #' A dataset containing information about place of residence, etc.
 #' @format A data frame with 451 rows and 23 variables:
@@ -197,15 +197,15 @@ NULL
 #'
 #' @docType data
 #' @keywords datasets
-#' @name Santiago2016_r0
-#' @usage data(Santiago2016_r0)
+#' @name SantiagoSurvey_r0
+#' @usage data(SantiagoSurvey_r0)
 #' @source A face to face survey considering pre-census 2012
 #' @examples
-#'  data(Santiago2016_r0)
-#'  ORIGIN <- Santiago2016_r0$ORIGIN
-"Santiago2016_r0"
+#'  data(SantiagoSurvey_r0)
+#'  ORIGIN <- SantiagoSurvey_r0$ORIGIN
+"SantiagoSurvey_r0"
 
-#' Santiago2016_allelse.
+#' SantiagoSurvey_allelse.
 #'
 #' A dataset containing everything not in Santiago2016_r0.
 #' @format A data frame with 451 rows and 111 variables:
@@ -325,10 +325,10 @@ NULL
 #'
 #' @docType data
 #' @keywords datasets
-#' @name Santiago2016_allelse
-#' @usage data(Santiago2016_allelse)
+#' @name SantiagoSurvey_allelse
+#' @usage data(SantiagoSurvey_allelse)
 #' @source A face to face survey considering pre-census 2012
 #' @examples
-#'  data(Santiago2016_allelse)
-#'  GDPPC <- Santiago2016_allelse$GDPPC
-"Santiago2016_allelse"
+#'  data(SantiagoSurvey_allelse)
+#'  GDPPC <- SantiagoSurvey_allelse$GDPPC
+"SantiagoSurvey_allelse"

@@ -14,7 +14,7 @@ library(dplyr)
 Read source file:
 ```{r}
 
-Santiago2016 <- read_excel("Santiago2016.xlsx")
+Santiago2016 <- read_excel("SantiagoSurvey.xlsx")
 ```
 
 Rename:
