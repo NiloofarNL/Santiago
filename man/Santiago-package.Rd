@@ -7,8 +7,6 @@
 \title{Santiago: A package based on a paper-based survey conducted face-to-face in Santiago in 2016}
 \description{
 A dataset containing information about socio-demographics, health-related, perceptions and travel behaviour, travel choices and planning, social interaction factors, built environment of users of active and motorized modes of transportation.
-
-The goal of Santiago is to contribute to psychological impacts on travelers by examining the feelings of stress by users of active and motorized modes of transportation.Furthermore, it also investigates the importance that travelers attach to their feelings of stress.
 }
 \references{
 \url{https://github.com/NiloofarNL/Santiago}

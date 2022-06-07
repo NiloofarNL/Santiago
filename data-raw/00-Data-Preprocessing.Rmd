@@ -24,7 +24,7 @@ SantiagoSurvey_trans <- SantiagoSurvey %>%
        ID = NUMERO,# rename() function of dplyr
        ORIGIN = ORIGEN,
        r0A_COMMUNE= r0A_COMUNA,
-       r0B_MACRO_ZONA = r0B_MACRO_ZONA,
+       #r0B_MACR_ZONA = r0B_MACR_ZONA,
        r0B_CALLE_1 = r0B_CALLE_1,
        r0B_CALLE_2= r0B_CALLE_2,
        r0C_GENDER = r0C_GENERO,
@@ -51,7 +51,7 @@ SantiagoSurvey_trans <- SantiagoSurvey %>%
        r1E_SAFETY = r1E_SEGUR,
        r1F_COMFORT = r1F_COMOD,
        r1GA_STRESS = r1GA_ESTRES,
-       r1GB_EFFORT = r1GB_ESFUERZO,
+       #r1GB_EFFORT = r1GB_ESFUERZO,
        r1GC_PROXIMITY = r1GC_CERC,
        r1GD_CONTAM = r1GD_CONTAM,
        r1GE_SAFETY = r1GE_SEGUR,
@@ -159,54 +159,74 @@ SantiagoSurvey_trans <- SantiagoSurvey %>%
 
 Split table:
 ```{r INDIVIDUAL CHARACTERISTICS}
-SantiagoSurvey_r0 <- SantiagoSurvey_trans %>%
+Santiago_IC <- SantiagoSurvey_trans %>%
   dplyr::select(ID, ORIGIN, starts_with("r0"))
 ```
 
 ```{r Health}
-SantiagoSurvey_r1 <- SantiagoSurvey_trans %>%
+Santiago_H <- SantiagoSurvey_trans %>%
   dplyr::select(starts_with("r1"))
 ```
 
 ```{r FEELINGS AND EMOTIONS}
-SantiagoSurvey_r2 <- SantiagoSurvey_trans %>%
+Santiago_FE <- SantiagoSurvey_trans %>%
   dplyr::select(starts_with("r2"))
 ```
 
 ```{r REASON AND PLANNING OWN DECISIONS}
-SantiagoSurvey_r3 <- SantiagoSurvey_trans %>%
+Santiago_RPD <- SantiagoSurvey_trans %>%
   dplyr::select(starts_with("r3"))
 ```
 
 ```{r SOCIAL INTERACTION}
-SantiagoSurvey_r4 <- SantiagoSurvey_trans %>%
+Santiago_SI <- SantiagoSurvey_trans %>%
   dplyr::select(starts_with("r4"))
 ```
 
 ```{r NATURE _AND_ SUSTAINABILITY}
-SantiagoSurvey_r5 <- SantiagoSurvey_trans %>%
+Santiago_NS <- SantiagoSurvey_trans %>%
   dplyr::select(starts_with("r5"))
 ```
 
 ```{r ITC AND SHIFTING}
-SantiagoSurvey_r6 <- SantiagoSurvey_trans %>%
+Santiago_IS <- SantiagoSurvey_trans %>%
   dplyr::select(starts_with("r6"))
 ```
 
 ```{r BUILT ENVIRONMENT}
-SantiagoSurvey_r7 <- SantiagoSurvey_trans %>%
+Santiago_BE <- SantiagoSurvey_trans %>%
   dplyr::select(starts_with("r7"))
+```
+
+```{r TRAVEL WORK}
+Santiago_TW <- SantiagoSurvey_trans %>%
+  dplyr::select(starts_with("r8"))
 ```
 
 Save  to `data` folder:
 ```{r}
-usethis::use_data(Santiago2016, 
+usethis::use_data(SantiagoSurvey_trans, 
                   overwrite = TRUE)
 
-usethis::use_data(Santiago2016_r0, 
+usethis::use_data(Santiago_IC, 
+                  overwrite = TRUE)
+usethis::use_data(Santiago_H, 
+                  overwrite = TRUE)
+usethis::use_data(Santiago_FE, 
+                  overwrite = TRUE)
+usethis::use_data(Santiago_RPD, 
+                  overwrite = TRUE)
+usethis::use_data(Santiago_SI, 
+                  overwrite = TRUE)
+usethis::use_data(Santiago_NS, 
+                  overwrite = TRUE)
+usethis::use_data(Santiago_IS, 
+                  overwrite = TRUE)
+usethis::use_data(Santiago_BE, 
+                  overwrite = TRUE)
+usethis::use_data(Santiago_TW, 
                   overwrite = TRUE)
 
-usethis::use_data(Santiago2016_allelse, 
-                  overwrite = TRUE)
+
 ```
 
