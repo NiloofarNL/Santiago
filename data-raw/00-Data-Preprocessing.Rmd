@@ -1,6 +1,8 @@
 ---
 title: "00-Data-Preprocessing"
-output: html_notebook
+output:
+  html_document:
+    df_print: paged
 ---
 
 In this notebook we read and preprocess the raw data.
