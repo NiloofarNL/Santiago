@@ -21,8 +21,8 @@ You can install the development version of Santiago from
 # install.packages("devtools")
 devtools::install_github("NiloofarNL/Santiago")
 #> Downloading GitHub repo NiloofarNL/Santiago@HEAD
-#>          checking for file 'C:\Users\bahman.notebook\AppData\Local\Temp\RtmpkJWDW6\remotes3c9c67f4d5e\NiloofarNL-Santiago-39fe745/DESCRIPTION' ...  v  checking for file 'C:\Users\bahman.notebook\AppData\Local\Temp\RtmpkJWDW6\remotes3c9c67f4d5e\NiloofarNL-Santiago-39fe745/DESCRIPTION' (564ms)
-#>       -  preparing 'Santiago':
+#>          checking for file 'C:\Users\bahman.notebook\AppData\Local\Temp\RtmpUleNSN\remotes4550602c6c\NiloofarNL-Santiago-abb62c8/DESCRIPTION' ...     checking for file 'C:\Users\bahman.notebook\AppData\Local\Temp\RtmpUleNSN\remotes4550602c6c\NiloofarNL-Santiago-abb62c8/DESCRIPTION' ...   v  checking for file 'C:\Users\bahman.notebook\AppData\Local\Temp\RtmpUleNSN\remotes4550602c6c\NiloofarNL-Santiago-abb62c8/DESCRIPTION' (652ms)
+#>       -  preparing 'Santiago': (667ms)
 #>    checking DESCRIPTION meta-information ...     checking DESCRIPTION meta-information ...   v  checking DESCRIPTION meta-information
 #>       -  checking for LF line-endings in source and make files and shell scripts
 #>       -  checking for empty or unneeded directories
@@ -39,7 +39,7 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(Santiago)
-data("Santiago2016")
+data("SantiagoSurvey")
 
 ## basic example code
 ```

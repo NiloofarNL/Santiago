@@ -207,7 +207,7 @@ NULL
 
 #' SantiagoSurvey_allelse.
 #'
-#' A dataset containing everything not in Santiago2016_r0.
+#' A dataset containing everything not in SantiagoSurvey_r0.
 #' @format A data frame with 451 rows and 111 variables:
 #' \describe{
 #'   \item{ID}{Unique identifier of respondent}

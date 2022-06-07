@@ -14,24 +14,188 @@ library(dplyr)
 Read source file:
 ```{r}
 
-Santiago2016 <- read_excel("SantiagoSurvey.xlsx")
+SantiagoSurvey <- read_excel("SantiagoSurvey.xlsx")
 ```
 
 Rename:
 ```{r}
-Santiago2016 <- Santiago2016 %>%
-  rename(ID = NUMERO)
+SantiagoSurvey_trans <- SantiagoSurvey %>%
+  rename( 
+       ID = NUMERO,# rename() function of dplyr
+       ORIGIN = ORIGEN,
+       r0A_COMMUNE= r0A_COMUNA,
+       r0B_MACRO_ZONA = r0B_MACRO_ZONA,
+       r0B_CALLE_1 = r0B_CALLE_1,
+       r0B_CALLE_2= r0B_CALLE_2,
+       r0C_GENDER = r0C_GENERO,
+       r0D_AGE = r0D_EDAD,
+       r0E_WEIGHT = r0E_PESO,
+       r0F_HEIGHT= r0F_ALTURA,
+       r0G_EDUCATION = r0G_EDUCACION,
+       r0H_OCCUPATION = r0H_OCUPACION,
+       r0I_COM_TRAB_1 = r0I_COM_TRAB_1,
+       r0I_COM_TRAB_2 = r0I_COM_TRAB_2,
+       r0J_INCOME = r0J_INGRESO,
+       r0K_ADULTS = r0K_ADULTOS,
+       r0L_CHILDREN = r0L_NIÑOS,
+       r0N_DRIVING_LICENSE = r0N_LICENCIA,
+       r0M_DISABILITY = r0M_DISCAPA,
+       r0O_TYPE_DIS = r0O_TIPO,
+       r0P_MODE1 = r0P_MODO1,
+       r0P_MODE2 = r0Q_MODO2,
+       r0P_MODE3 = r0R_MODO3,
+       r1A_STRESS = r1A_ESTRES,
+       r1B_EFFORT = r1B_ESFUERZO,
+       r1C_PROXIMITY = r1C_CERCANIA,
+       r1D_CONTAM = r1D_CONTAM,
+       r1E_SAFETY = r1E_SEGUR,
+       r1F_COMFORT = r1F_COMOD,
+       r1GA_STRESS = r1GA_ESTRES,
+       r1GB_EFFORT = r1GB_ESFUERZO,
+       r1GC_PROXIMITY = r1GC_CERC,
+       r1GD_CONTAM = r1GD_CONTAM,
+       r1GE_SAFETY = r1GE_SEGUR,
+       r1GF_COMFORT = r1GF_COMOD,
+       r2AA_FREEDOM = r2AA_LIBERTAD,
+       r2AB_UNSAFETY = r2AB_INSEG,
+       r2AC_FUNCTIONALITY = r2AC_FUNCIONA,
+       r2AD_ENJOYMENT = r2AD_ENTRET,
+       r2AE_LOWCOST = r2AE_COSTO,
+       r2AF_POVERTY = r2AF_POBREZ,
+       r2AG_SAFETY = r2AG_SEGURIDAD,
+       r2AH_WASTE_OF_TIME = r2AH_TIEMPO,
+       r2AI_UNPUNCTUALITY = r2AI_IMPUNT,
+       r2AJ_CONGEST = r2AJ_CONGEST,
+       r2AK_EFFICIENCY = r2AK_EFICIENC,
+       r2AL_LUXURY = r2AL_LUJO,
+       r2AM_ENVIRONMENT = r2AM_AMBIENT,
+       r2AN_HEALTH = r2AN_SALUD,
+       r2AO_INTSOCI = r2AO_INTSOCI,
+       r2AP_UNCOMFT = r2AP_INCOM,
+       r2AQ_HAPPINESS = r2AQ_FELICID,
+       r2AR_STATUS = r2AR_ESTAT,
+       r2B_DAILY_ENJOY = r2B_DISFRUT,
+       r2C_IMP_QUALITY = r2C_IMPORT,
+       r2D_AFFECT = r2D_AFECTA,
+       r2E_FACILIT = r2E_FACILIT,
+       r3A_ACCESS = r3A_ACCESS, 
+       r3B_ACC_EM = r3B_ACC_EM,
+       r3CA_FAM = r3CA_FAM,
+       r3CB_REC = r3CB_REC,
+       r3CC_CUL = r3CC_CUL,
+       r3CD_SPO = r3CD_DEP,
+       r3CE_GROC = r3CE_COM,
+       r3CF_SOC = r3CF_SOC,
+       r3DA_FAM = r3DA_FAM,
+       r3DB_REC = r3DB_REC,
+       r3DC_CUL = r3DC_CUL,
+       r3DD_SPO = r3DD_DEP,
+       r3DE_GROC = r3DE_COM,
+       r3DF_SOC = r3DF_SOC,
+       r3E_OPTIONS = r3E_OPCIONES,
+       r3F_ACCESS_DEPENDENCY = r3F_ACCESO,
+       r3G_QUALITY_INCRS = r3G_CALIDAD,
+       r3H_ECON = r3H_ECON,
+       r3I_NOECON = r3I_NOECON,
+       r3JA_OFIC = r3JA_OFIC,
+       r3JB_MODES = r3JB_MODOS,
+       r3JC_COMFORT = r3JC_COMOD,
+       r3JD_OTHERS = r3JD_OTROS,
+       r4A_INTERACC = r4A_INTERACC,
+       r4B_PERSON = r4B_PERSON,
+       r4C_DISCRIM = r4C_DISCRIM,
+       r4D_MODE = r4D_MODO,
+       r5A_CHANGE = r5A_CAMBIO,
+       r5B_CHANGE_MODE = r5B_CAMBIO,
+       r5C_SUST = r5C_SUST,
+       r5D_IMP_SUST = r5D_IMP_SUST,
+       r5E_PAYMENT = r5E_PAGO,
+       r5F_PAYMENTS = r5F_PAGOMAS,
+       r5GA_TREE = r5GA_ARBOL,
+       r5GB_PARK = r5GB_PARK,
+       r5GC_MODE = r5GC_MODO,
+       r5GD_MODE = r5GD_MODO,
+       r6A_SHIFT = r6A_INTERC,
+       r6B_QUALITY_SHIFT = r6B_CALIDAD,
+       r6CA_WAITING = r6CA_ESPERA,
+       r6CB_TIME_SHIFT = r6CB_TRANSB,
+       r6CC_TOTALTIME = r6CC_TOTAL,
+       r6D_DIFFICULTY = r6D_DIFICULTA,
+       r6E_TOOL = r6E_HERRAM,
+       r6F_INFO = r6F_INFO,
+       r6G_IMP_INFO = r6G_IMP_INFO,
+       r7AA_AUTOSPACE = r7AA_AUTO,
+       r7AB_PARKING_NUMB = r7AB_EST,
+       r7AC_QHIWAY = r7AC_AUTOP,
+       r7AD_PEDESTRN = r7AD_PEATON,
+       r7AE_QSIDEWA = r7AE_VERED,
+       r7AF_CLEAN_STOP = r7AF_PARAD,
+       r7AG_SEAT = r7AG_ASIENT,
+       r7AH_CLIMA = r7AH_CLIMA,
+       r7AI_CICLEWA_NUMB = r7AI_CICLOV,
+       r7AJ_CICLEWA_Q = r7AJ_CICLOV,
+       r7AK_BICSHARE = r7AK_BICI,
+       r7BA_IMPAUTOSPACE = r7BA_AUTO,
+       r7BB_IMPPARKING_NUMB = r7BB_EST,
+       r7BC_IMPQHIWAY = r7BC_AUTOP,
+       r7BD_IMPPEDESTRN = r7BD_PEATON,
+       r7BE_IMPQSIDEWA = r7BE_VERED,
+       r7BF_IMPCLEAN_STOP = r7BF_PARAD,
+       r7BG_IMPSEAT = r7BG_ASIENT,
+       r7BH_IMPCLIMA = r7BH_CLIMA,
+       r7BI_IMPCICLEWA_NUMB = r7BI_CICLOV,
+       r7BJ_IMPCICLEWA_Q = r7BJ_CICLOV,
+       r7BK_IMPBICSHARE = r7BK_BICI,
+       r8A_ACCESSJOB = r8A_ACCESO,
+       r8B_JOBOPP = r8B_OPORT,
+       r8C_ACC_COM = r8C_ACC_COM,
+       r8D_EMPLSATISF = r8D_EMPLEO,
+       r8E_TIMECOMMUT = r8E_TIEMPO,
+       r8F_SCHEDULE = r8F_HORARIOS,
+       r8G_SPENDING = r8G_GASTO
+       )
+
 ```
 
 Split table:
-```{r}
-Santiago2016_r0 <- Santiago2016 %>%
+```{r INDIVIDUAL CHARACTERISTICS}
+SantiagoSurvey_r0 <- SantiagoSurvey_trans %>%
   dplyr::select(ID, ORIGIN, starts_with("r0"))
 ```
 
-```{r}
-Santiago2016_allelse <- Santiago2016 %>%
-  dplyr::select(-starts_with("r0"))
+```{r Health}
+SantiagoSurvey_r1 <- SantiagoSurvey_trans %>%
+  dplyr::select(starts_with("r1"))
+```
+
+```{r FEELINGS AND EMOTIONS}
+SantiagoSurvey_r2 <- SantiagoSurvey_trans %>%
+  dplyr::select(starts_with("r2"))
+```
+
+```{r REASON AND PLANNING OWN DECISIONS}
+SantiagoSurvey_r3 <- SantiagoSurvey_trans %>%
+  dplyr::select(starts_with("r3"))
+```
+
+```{r SOCIAL INTERACTION}
+SantiagoSurvey_r4 <- SantiagoSurvey_trans %>%
+  dplyr::select(starts_with("r4"))
+```
+
+```{r NATURE _AND_ SUSTAINABILITY}
+SantiagoSurvey_r5 <- SantiagoSurvey_trans %>%
+  dplyr::select(starts_with("r5"))
+```
+
+```{r ITC AND SHIFTING}
+SantiagoSurvey_r6 <- SantiagoSurvey_trans %>%
+  dplyr::select(starts_with("r6"))
+```
+
+```{r BUILT ENVIRONMENT}
+SantiagoSurvey_r7 <- SantiagoSurvey_trans %>%
+  dplyr::select(starts_with("r7"))
 ```
 
 Save  to `data` folder:
